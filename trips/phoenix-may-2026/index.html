@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas — Phoenix, May 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 16px;
+            line-height: 1.5;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid #ff6b1a;
+        }
+        .hero h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .hero .meta {
+            font-size: 14px;
+            color: #888;
+        }
+        .card {
+            background: #14141f;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .card h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ff6b1a;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .flight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .flight:last-child { border-bottom: none; }
+        .flight-number {
+            font-weight: 600;
+            color: #ff6b1a;
+        }
+        .flight-route { font-size: 14px; color: #aaa; }
+        .flight-time {
+            font-size: 14px;
+            text-align: right;
+        }
+        .hotel {
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .hotel:last-child { border-bottom: none; }
+        .hotel-name {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .hotel-address {
+            font-size: 13px;
+            color: #888;
+        }
+        .back {
+            display: block;
+            text-align: center;
+            color: #ff6b1a;
+            text-decoration: none;
+            padding: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Phoenix</h1>
+        <div class="meta">May 5-8, 2026 · 4 days</div>
+    </div>
+
+    <div class="card">
+        <h2>Outbound — Tue, May 5</h2>
+        <div class="flight">
+            <div>
+                <div class="flight-number">WN 2194</div>
+                <div class="flight-route">GRR → MDW</div>
+            </div>
+            <div class="flight-time">5:05 PM EDT</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-number">WN 1601</div>
+                <div class="flight-route">MDW → PHX</div>
+            </div>
+            <div class="flight-time">6:50 PM CDT</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Hotel</h2>
+        <div class="hotel">
+            <div class="hotel-name">DoubleTree by Hilton Phoenix Midtown</div>
+            <div class="hotel-address">4000 N Central Ave, Phoenix, AZ 85012<br>1-602-279-9811</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Car Rental</h2>
+        <div class="hotel">
+            <div class="hotel-name">National Car Rental</div>
+            <div class="hotel-address">Pick up: May 5 at 8:00 PM (PHX)<br>Drop off: May 8 at 6:00 AM (PHX)</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Return — Fri, May 8</h2>
+        <div class="flight">
+            <div>
+                <div class="flight-number">WN 3815</div>
+                <div class="flight-route">PHX → MCI</div>
+            </div>
+            <div class="flight-time">8:10 AM MST</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-route">Arrive Kansas City</div>
+            </div>
+            <div class="flight-time">12:50 PM CDT</div>
+        </div>
+    </div>
+
+    <a href="../../index.html" class="back">← All Trips</a>
+</body>
+</html>

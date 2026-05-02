@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas — Grand Rapids, May 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 16px;
+            line-height: 1.5;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid #ff6b1a;
+        }
+        .hero h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .hero .meta {
+            font-size: 14px;
+            color: #888;
+        }
+        .card {
+            background: #14141f;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .card h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ff6b1a;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .flight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .flight:last-child { border-bottom: none; }
+        .flight-number {
+            font-weight: 600;
+            color: #ff6b1a;
+        }
+        .flight-route { font-size: 14px; color: #aaa; }
+        .flight-time {
+            font-size: 14px;
+            text-align: right;
+        }
+        .back {
+            display: block;
+            text-align: center;
+            color: #ff6b1a;
+            text-decoration: none;
+            padding: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Grand Rapids</h1>
+        <div class="meta">Mon, May 4, 2026 · Day trip</div>
+    </div>
+
+    <div class="card">
+        <h2>Outbound — Mon, May 4</h2>
+        <div class="flight">
+            <div>
+                <div class="flight-number">WN 1246</div>
+                <div class="flight-route">MCI → MDW</div>
+            </div>
+            <div class="flight-time">7:05 PM CDT</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-number">WN 1955</div>
+                <div class="flight-route">MDW → GRR</div>
+            </div>
+            <div class="flight-time">9:50 PM CDT</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-route">Arrive Grand Rapids</div>
+            </div>
+            <div class="flight-time">11:45 PM EDT</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Notes</h2>
+        <p style="font-size: 14px; color: #aaa; padding: 8px 0;">No hotel booked for this trip. One day only.</p>
+    </div>
+
+    <a href="../../index.html" class="back">← All Trips</a>
+</body>
+</html>
