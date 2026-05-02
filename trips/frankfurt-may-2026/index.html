@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas — Frankfurt, May 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 16px;
+            line-height: 1.5;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid #ff6b1a;
+        }
+        .hero h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .hero .meta {
+            font-size: 14px;
+            color: #888;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .weather-chips {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .chip {
+            background: rgba(255,107,26,0.15);
+            color: #ff6b1a;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .card {
+            background: #14141f;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .card h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ff6b1a;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .alert {
+            background: rgba(255,107,26,0.1);
+            border-left: 3px solid #ff6b1a;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 0 8px 8px 0;
+        }
+        .alert-title {
+            font-weight: 600;
+            color: #ff6b1a;
+            margin-bottom: 4px;
+        }
+        .flight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .flight:last-child { border-bottom: none; }
+        .flight-number {
+            font-family: 'JetBrains Mono', monospace;
+            color: #ff6b1a;
+            font-weight: 600;
+        }
+        .flight-route { font-size: 14px; color: #aaa; }
+        .flight-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+        }
+        .task {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+        }
+        .task input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ff6b1a;
+        }
+        .task label { font-size: 14px; }
+        .task.urgent label { color: #ff6b1a; font-weight: 600; }
+        .update {
+            font-size: 13px;
+            color: #888;
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+        }
+        .update:last-child { border-bottom: none; }
+        .update time {
+            font-family: 'JetBrains Mono', monospace;
+            color: #555;
+            font-size: 11px;
+        }
+        .venue {
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .venue:last-child { border-bottom: none; }
+        .venue-name {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .venue-meta {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .vote-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .vote-btn {
+            background: #1a1a2e;
+            border: 1px solid #333;
+            color: #888;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .vote-btn:hover { border-color: #ff6b1a; color: #ff6b1a; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Frankfurt</h1>
+        <div class="meta">May 20-25, 2026 · Day 0 of 5</div>
+        <div class="weather-chips">
+            <span class="chip">68°F</span>
+            <span class="chip">Partly Cloudy</span>
+            <span class="chip">12mph</span>
+        </div>
+    </div>
+
+    <div class="alert">
+        <div class="alert-title">⚠️ HOTEL NOT BOOKED</div>
+        <div>Need 2 rooms near city center, May 21-25. Marriott preferred. 19 days remaining.</div>
+    </div>
+
+    <div class="card">
+        <h2>Next Up</h2>
+        <div class="flight">
+            <div>
+                <div class="flight-number">DL 1256</div>
+                <div class="flight-route">MCI → DTW</div>
+            </div>
+            <div class="flight-time">May 20<br>6:30 AM</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Open Tasks</h2>
+        <div class="task urgent">
+            <input type="checkbox" id="hotel">
+            <label for="hotel">Book hotel (2 rooms, 4 nights)</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="checkin">
+            <label for="checkin">Check-in for outbound flight</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="rmv">
+            <label for="rmv">Download RMV transit app</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="debbie">
+            <label for="debbie">Confirm Debbie & Dustin flight details</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="dinner">
+            <label for="dinner">Pre-show dinner reservations (May 22, 24)</label>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Atlas Updates</h2>
+        <div class="update">
+            <time>2026-05-01 21:56</time><br>
+            Atlas initialized for Frankfurt trip. Hotel booking is priority #1.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Flights</h2>
+        <div class="flight">
+            <div>
+                <div class="flight-number">DL 1256</div>
+                <div class="flight-route">MCI → DTW</div>
+            </div>
+            <div class="flight-time">May 20<br>6:30 AM</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-number">DL 86</div>
+                <div class="flight-route">DTW → FRA</div>
+            </div>
+            <div class="flight-time">May 20<br>7:30 PM</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-number">DL 87</div>
+                <div class="flight-route">FRA → DTW</div>
+            </div>
+            <div class="flight-time">May 25<br>11:00 AM</div>
+        </div>
+        <div class="flight">
+            <div>
+                <div class="flight-number">DL 2761</div>
+                <div class="flight-route">DTW → MCI</div>
+            </div>
+            <div class="flight-time">May 25<br>3:59 PM</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Concerts</h2>
+        <div class="venue">
+            <div class="venue-name">Metallica — M72 World Tour</div>
+            <div class="venue-meta">Deutsche Bank Park · May 22 & 24 · 6:00 PM CEST</div>
+            <div>Both shows with Debbie. Marcie + Dustin exploring city.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Tomorrow's Preview</h2>
+        <div class="update">
+            May 2, 2026 — 18 days until departure<br>
+            Focus: Hotel booking research and reservations
+        </div>
+    </div>
+
+<!-- ATLAS-RENDER-OK -->
+</body>
+</html>
